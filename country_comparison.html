@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="comparison_styles.css">
+    </head>
+    <body>
+        <div id="nav">
+            <ul>
+                <li><a href = "">Featured</a></li>
+                <li><a href = "">Planner</a></li>
+                <li><a href = "">Comparison</a></li>
+                <li><a href = "">Calender</a></li>
+            </ul>
+        </div>
+        <div id="header">
+            <h1 class="textlogo">City Comparison</h1>
+        </div>
+        <div class="search-container">
+            <form action="/search_page" method="get">
+                <input type="input" name="search_query" placeholder="Search city's atrribute...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="border-container">
+            <div class="border-box">
+                <form action="search_city" method="get">
+                    <input type="input" name="search_query" placeholder="City1">
+                    <button type="Enter">Enter</button>
+                </form>
+            </div>
+            <div class="border-box">
+                <form action="search_city" method="get">
+                    <input type="input" name="search_query" placeholder="City2">
+                    <button type="Enter">Enter</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="border2-container">
+            <div class="content-box">
+                <h2 class="textlogo">City1</h2>
+                <div id="pics">
+                    <img src="seattle.jpg" alt="Seattle's Picture" width="150" height="200">
+                </div>
+                <div id="atrributes">
+                    <p>Food: 4/5</p>
+                    <p>Landmark: 4/5</p>
+                    <p>Housing: 4/5 </p>
+                </div>
+            
+            </div>
+            <div class="content-box">
+                <h2 class="textlogo">City2</h2>
+                <div id="pics">
+                    <img src="sf.jpg" alt="SF's Picture" width="150" height="200">
+                </div>
+                <div id="atrributes">
+                    <p>Food: 4/5</p>
+                    <p>Landmark: 4/5</p>
+                    <p>Housing: 4/5 </p>
+                </div>
+            </div>
+
+
+        </div>
+        
+        
+        
+    </body>
+</html>
