@@ -13,23 +13,24 @@
         <link rel="stylesheet" href="featured_styles.css">
     </head>
     <body>
-        <div id="header">
-            <h1 class="textlogo">Travel Planner</h1>
+        <div class="main-title">Travel Page</div>
+        <div class="marquee">
+            <p>Welcome to Our   Travel Website! Explore the World with Us!</p>
         </div>
-        <div id="nav">
-            <ul>
-                <li><a href="index.html">Featured</a></li>
-                <li><a href="planner.html">Planner</a></li>
-                <li><a href="comparison.html">Comparison</a></li>
-                <li><a href="calender.html">Calender</a></li>
-            </ul>
+        <div class="navbar">
+            <a href="featured.html">Feature</a>
+            <a href="plannerOverviewPage.html">Planner</a>
+            <a href="country_comparison.html">Composition</a>
+            <a href="calendar.html">Calendar</a>
         </div>
-        <div>
-            <form action="" method="post" id="search">
-                <input type="text" id="citySearch" name="citySearch" placeholder="Enter a City">
-                <input type="submit" value="Submit" id="submit">
-            </form>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
+            <button type="submit">Search</button>
+            <div id="suggestions" class="suggestions-container">
+            
+            </div>
         </div>
+        <script src="script_YI.js"></script>
         <div id="featured">
             <div id="featImg">
                 <img src="resources/Eiffel_Tower_20051010.jpg">
