@@ -25,7 +25,7 @@
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
-            <button type="submit">Search</button>
+            <button id = "search">Search</button>
             <div id="suggestions" class="suggestions-container">
             
             </div>
@@ -94,6 +94,11 @@
             </div>
         </div>
         
-        <script src="" async defer></script>
+        <script>
+            const search = document.getElementById('search');
+            search.addEventListener('click', () => {
+                window.location.href = "cityPage.html"
+            });
+        </script>
     </body>
 </html>
