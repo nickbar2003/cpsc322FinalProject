@@ -1,26 +1,25 @@
-
 :root {
     --gradient: linear-gradient(to right, #00C6FF, #0072ff);
 }
 
 .main-title {
-    background: var(--gradient);  
-    color: white;               
-    text-align: center;           
-    padding: 20px 0;              
-    font-size: 32px;            
-   
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+
 }
 
 
 .navbar {
     height: 50px;
-    background: var(--gradient); 
+    background: var(--gradient);
     overflow: hidden;
     display: flex;
     font-size: 10px;
     justify-content: space-around;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar a {
@@ -39,6 +38,7 @@
     background-color: #0044ff;
     color: white;
 }
+
 /* .navbar :active{
     background-color: #4CAF50; 
     color: white;    
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     padding: 15px;
-    background: var(--gradient); 
+    background: var(--gradient);
     position: relative;
 }
 
@@ -59,7 +59,7 @@
     border: 1px solid #ddd;
     margin-right: 10px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .search-bar button {
@@ -81,9 +81,9 @@
     overflow: hidden;
     font-size: 10px;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    background: var(--gradient); 
-    padding: 5px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: var(--gradient);
+    padding: 5px 0;
     color: white;
 }
 
@@ -94,8 +94,13 @@
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .suggestions-container {
@@ -104,13 +109,13 @@
     background-color: #fff;
     border-radius: 0 0 4px 4px;
     position: absolute;
-    top: 78.5%; 
+    top: 78.5%;
     width: auto;
     max-height: 200px;
     overflow-y: auto;
     z-index: 5;
     left: 20.5%;
-    right: 41%; 
+    right: 41%;
     border-radius: 4px;
 }
 
@@ -400,7 +405,7 @@
 /* (Danni Du) Comparison City */
 
 body {
-    background-color: #F2F2F2;
+    background-color: white;
 }
 
 p {
@@ -425,7 +430,8 @@ h2 {
     padding: 5px;
 }
 
-a, li a {
+a,
+li a {
     color: #000000;
 }
 
@@ -436,7 +442,7 @@ a, li a {
 }
 
 
-    
+
 
 #nav ul {
     display: flex;
@@ -469,50 +475,46 @@ a, li a {
     border: 2px solid #6b95bf;
     text-decoration: overline;
     font-weight: bold;
-    
+
 }
 
-.search-container
-{
+.search-container {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.search-container form
-{
+.search-container form {
     display: flex;
     justify-content: row;
 }
 
-.search-container input[type="input"]
-{
-    width:500px;
-    padding:10px;
-    border:2px solid #ccc;
+.search-container input[type="input"] {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #ccc;
     border-radius: 16px;
 }
 
-.search-container button
-{
+.search-container button {
     padding: 5px 10px;
-    border:1px solid #ccc;
-    background-color:  rgb(125, 125, 193);
+    border: 1px solid #ccc;
+    background-color: rgb(125, 125, 193);
     color: white;
     border-radius: 3px;
     font-size: 12px;
     cursor: pointer;
 }
 
-.search-container button:hover
-{
+.search-container button:hover {
     background-color: navy;
 }
 
 .border-container {
     display: flex;
-    justify-content: space-around; /* 使两个边框水平分布且间距均匀 */
+    justify-content: space-around;
+    /* 使两个边框水平分布且间距均匀 */
     /* height: 100vh; */
     padding: 20px;
     padding-bottom: 0;
@@ -525,34 +527,36 @@ a, li a {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* 垂直排列内容 */
+    flex-direction: column;
+    /* 垂直排列内容 */
     justify-content: center;
 }
 
 .border-box form {
     display: flex;
-    flex-direction: row; /* 水平排列 input 和 button */
+    flex-direction: row;
+    /* 水平排列 input 和 button */
     align-items: center;
 }
 
-.border-box form input[type="input"], 
+.border-box form input[type="input"],
 .border-box form button {
-    margin: 5px; /* 添加一些间距 */
+    margin: 5px;
+    /* 添加一些间距 */
 }
 
 .border-box form input[type="input"] {
-    width:500px;
-    padding:10px;
-    border:2px solid #ccc;
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #ccc;
     border-radius: 16px;
 }
 
-.border-box form button
-{
+.border-box form button {
 
     padding: 10px 20px;
-    border:1px solid #ccc;
-    background-color:  rgb(125, 125, 193);
+    border: 1px solid #ccc;
+    background-color: rgb(125, 125, 193);
     color: white;
     border-radius: 3px;
     font-size: 12px;
@@ -570,11 +574,10 @@ a, li a {
     /* height: 100vh; */
     padding: 20px;
     padding-top: 0;
-    
+
 }
 
-#pics
-{
+#pics {
     display: flex;
     flex-direction: column;
     float: left;
@@ -582,8 +585,7 @@ a, li a {
     padding-left: 10px;
 }
 
-#atrributes
-{
+#atrributes {
     display: flex;
     flex-direction: column;
     float: left;
@@ -594,7 +596,8 @@ a, li a {
 .content-box {
     border: 2px solid black;
     width: 40%;
-    height: 50vh; /* 根据需要调整高度 */
+    height: 50vh;
+    /* 根据需要调整高度 */
     /* padding: 20px;
     padding-top: 0; */
     box-sizing: border-box;
@@ -605,5 +608,3 @@ a, li a {
     height: 100%;
     overflow: auto;
 }
-
-
