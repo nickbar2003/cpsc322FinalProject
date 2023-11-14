@@ -413,7 +413,7 @@ p {
     font-size: 14px;
 }
 
-h1 {
+#header h1 {
     font-family: 'Courier New', monospace;
     font-size: 20px;
     text-align: center;
@@ -422,7 +422,7 @@ h1 {
     padding: 5px;
 }
 
-h2 {
+.border2-container h2 {
     font-family: 'Courier New', monospace;
     font-size: 10px;
     background-color: #6b95bf;
