@@ -1,0 +1,208 @@
+body {
+    background-color: #F2F2F2;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    text-align: center;
+    background-color: #6b95bf;
+    color: #ffffff;
+    padding: 5px;
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    background-color: #6b95bf;
+    text-align: end;
+    padding: 5px;
+}
+
+a, li a {
+    color: #000000;
+}
+
+.textlogo {
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+    
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+#nav li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#nav a {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    font-variant: small-caps;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 2px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#nav a:hover {
+    background-color: #878ad5;
+    color: #ffffff;
+    /* padding: 10px; */
+    border: 2px solid #6b95bf;
+    text-decoration: overline;
+    font-weight: bold;
+    
+}
+
+.search-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-container form
+{
+    display: flex;
+    justify-content: row;
+}
+
+.search-container input[type="input"]
+{
+    width:500px;
+    padding:10px;
+    border:2px solid #ccc;
+    border-radius: 16px;
+}
+
+.search-container button
+{
+    padding: 5px 10px;
+    border:1px solid #ccc;
+    background-color:  rgb(125, 125, 193);
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-container button:hover
+{
+    background-color: navy;
+}
+
+.border-container {
+    display: flex;
+    justify-content: space-around; /* 使两个边框水平分布且间距均匀 */
+    /* height: 100vh; */
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.border-box {
+    border: 2px solid black;
+    width: 40%;
+    height: 10vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* 垂直排列内容 */
+    justify-content: center;
+}
+
+.border-box form {
+    display: flex;
+    flex-direction: row; /* 水平排列 input 和 button */
+    align-items: center;
+}
+
+.border-box form input[type="input"], 
+.border-box form button {
+    margin: 5px; /* 添加一些间距 */
+}
+
+.border-box form input[type="input"] {
+    width:500px;
+    padding:10px;
+    border:2px solid #ccc;
+    border-radius: 16px;
+}
+
+.border-box form button
+{
+
+    padding: 10px 20px;
+    border:1px solid #ccc;
+    background-color:  rgb(125, 125, 193);
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+.border-box form button:hover {
+    background-color: navy;
+}
+
+.border2-container {
+    display: flex;
+    justify-content: space-around;
+    /* height: 100vh; */
+    padding: 20px;
+    padding-top: 0;
+    
+}
+
+#pics
+{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+#atrributes
+{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+.content-box {
+    border: 2px solid black;
+    width: 40%;
+    height: 50vh; /* 根据需要调整高度 */
+    /* padding: 20px;
+    padding-top: 0; */
+    box-sizing: border-box;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    max-height: 700px;
+    height: 100%;
+    overflow: auto;
+}
+
+
