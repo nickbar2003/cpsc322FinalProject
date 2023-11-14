@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -81,4 +81,98 @@
             </div>
         </div>
     </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="plannerOverviewPage_styles.css">
+    <meta name="description" content="Travel Webpage">
+</head>
+<body>
+    <div class="main-title">Travel Page</div>
+    <div class="marquee">
+        <p>Welcome to Our   Travel Website! Explore the World with Us!</p>
+    </div>
+    <div class="navbar">
+        <a href="featured.html">Feature</a>
+        <a href="plannerOverviewPage.html">Planner</a>
+        <a href="country_comparison.html">Comparison</a>
+        <a href="calendar.html">Calendar</a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
+        <button type="submit">Search</button>
+        <div id="suggestions" class="suggestions-container">
+        
+        </div>
+    </div>
+    <div id="container">
+        <div id="main">
+            <h2 id="plannerHeader">Planner Overview</h2>
+
+            <div class="box-scroll-list">
+                <div class="planner-box">
+                    <div id="plan-title">
+                        <h3>Paris Plan</h3>
+                    </div>
+                    <div class="planner-buttons">
+                        <button type="edit" id="edit">Edit</button><br>
+                        <button type="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="planner-box">
+                    <div id="plan-title">
+                        <h3>US, Canada Plan</h3>
+                    </div>
+                    <div class="planner-buttons">
+                        <button type="edit" id="edit">Edit</button><br>
+                        <button type="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="planner-box">
+                    <div id="plan-title">
+                        <h3>Japan 10 Days Plan</h3>
+                    </div>
+                    <div class="planner-buttons">
+                        <button type="edit" id="edit">Edit</button><br>
+                        <button type="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="planner-box">
+                    <div id="plan-title">
+                        <h3>California 7 Days Trip Plan</h3>
+                    </div>
+                    <div class="planner-buttons">
+                        <button type="edit" id="edit">Edit</button><br>
+                        <button type="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="planner-box">
+                    <div id="plan-title">
+                        <h3>Other...</h3>
+                    </div>
+                    <div class="planner-buttons">
+                        <button type="edit" id="edit">Edit</button><br>
+                        <button type="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+
+                    <button type="add" id="add">+</button><br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
 </html>
