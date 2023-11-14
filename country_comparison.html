@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang = "en">
     <head>
         <meta charset = "UTF-8">
@@ -68,4 +68,97 @@
         
         
     </body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="comparisonPageStyles.css">
+    <meta name="description" content="Travel Webpage">
+</head>
+<body>
+    <div class="main-title">Travel Page</div>
+    <div class="marquee">
+        <p>Welcome to Our   Travel Website! Explore the World with Us!</p>
+    </div>
+    <div class="navbar">
+        <a href="featured.html">Feature</a>
+        <a href="plannerOverviewPage.html">Planner</a>
+        <a href="country_comparison.html">Composition</a>
+        <a href="calendar.html">Calendar</a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
+        <button type="submit">Search</button>
+        <div id="suggestions" class="suggestions-container">
+        
+        </div>
+    </div>
+    <!-- <div id="header">
+        <h1 class="textlogo">City Comparison</h1>
+    </div>
+    <div class="search-container">
+        <form action="/search_page" method="get">
+            <input type="input" name="search_query" placeholder="Search city's atrribute...">
+            <button type="submit">Search</button>
+        </form>
+    </div> -->
+    <div class="border-container">
+        <div class="border-box">
+            <form action="search_city" method="get">
+                <input type="input" name="search_query" placeholder="City1">
+                <button type="Enter">Enter</button>
+            </form>
+        </div>
+        <div class="border-box">
+            <form action="search_city" method="get">
+                <input type="input" name="search_query" placeholder="City2">
+                <button type="Enter">Enter</button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="border2-container">
+        <div class="content-box">
+            <h2 class="textlogo">City1</h2>
+            <div id="pics">
+                <img src="seattle.jpg" alt="Seattle's Picture" width="150" height="200">
+            </div>
+            <div id="atrributes">
+                <p>Food: 4/5</p>
+                <p>Landmark: 4/5</p>
+                <p>Housing: 4/5 </p>
+            </div>
+        
+        </div>
+        <div class="content-box">
+            <h2 class="textlogo">City2</h2>
+            <div id="pics">
+                <img src="sf.jpg" alt="SF's Picture" width="150" height="200">
+            </div>
+            <div id="atrributes">
+                <p>Food: 4/5</p>
+                <p>Landmark: 4/5</p>
+                <p>Housing: 4/5 </p>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+
+
+    <script src="script_YI.js"></script>
+</body>
 </html>
