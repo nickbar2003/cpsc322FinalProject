@@ -1,23 +1,35 @@
 # cpsc322FinalProject
-Your project’s name is the first thing people will see upon scrolling down to your README, and is included upon creation of your README file.
 
 # Description
-A description of your project follows. A good description is clear, short, and to the point. Describe the importance of your project, and what it does.
+(modified from WPD1 Abstract)
+ A travel website that will allow for a user to assemble a custom vacation plan; cities will have their destination details laid out on their own pages. These can be searched for by direct naming(via a seach-bar entry) or attribute filtering(e.g. affordability, current events, landmarks, etc.). Such pages will contain information relating to the following: activities, food, landmarks, and current events. Additionally, a vacation planner will present a calendar and itinerary that can be modified via the addition or subtraction of destinations, which can be compared between each other alongside a series of variables entered by the user.
 
-Table of Contents:
-Optionally, include a table of contents in order to allow other people to quickly navigate especially long or detailed READMEs.
+# Table of Contents
 
-Installation:
-Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
+-Installation
+-Usage
+-Contributing
+-Credits
+-License 
 
-Usage:
-The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+# Installation
+This project requires no installation, one can host it locally with VScode.
 
-Contributing:
-Larger projects often have sections on contributing to their project, in which contribution instructions are outlined. Sometimes, this is a separate file. If you have specific contribution preferences, explain them so that other developers know how to best contribute to your work. To learn more about how to help others contribute, check out the guide for setting guidelines for repository contributors.
 
-Credits:
-Include a section for credits in order to highlight and link to the authors of your project.
+# Usage:
+
+
+# Contributing
+This project is not currently seeking public contriubtion, though contribution will not be prevented.
+
+# Credits:
+Nicholas Barinaga (Github: nickbar2003)
+Sebastian Mathews (Github: https://github.com/smatthews2)
+Caleb Lefcort (Github: https://github.com/CalebLefcort)
+Danni Du (Github: https://github.com/moyigu)
+Yu Yu Kao (Github: https://github.com/yuyukao2002)
+Yi Lu (Github: https://github.com/YILU0617)
+Austin Tsow (GitHub: https://github.com/austintsow)
 
 # License
 
