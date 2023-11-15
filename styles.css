@@ -1,5 +1,6 @@
 :root {
     --gradient: linear-gradient(to right, #00C6FF, #0072ff);
+    --regionColor: #6b95bf;
 }
 
 .main-title {
@@ -237,31 +238,29 @@
 }
 
 .cityWrapper {
-    background-color: #eee8e3;
+    background-color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
-    color: #3b373a;
+    color: black;
 }
 
 
 .cityName {
     display: flex;
     justify-content: center;
-    background-color: #d0aec1;
+    background-color: var(--regionColor);
     font-size: 3em;
-    color: #4a3d48;
+    color: #ffffff;
 
 }
 
 .informationWrapper {
     display: grid;
     grid-template-columns: 70% 30%;
-    border: 1em solid #754F5B;
-    border-radius: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
     gap: .25em;
 }
-
-.informationWrapper>div {}
 
 .mainInformation {
     display: flex;
@@ -272,13 +271,13 @@
 
 .mainInformation>div {
 
-    border-bottom: .25em solid #d0aec1;
+    border-bottom: .25em solid var(--regionColor);
     padding: .5em;
 }
 
 .mainInformation>div>h2 {
     display: inline;
-    border-bottom: .1em solid #5D4954;
+    border-bottom: .1em solid var(--regionColor);
     padding: .2em;
 }
 
@@ -287,13 +286,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-left: .5em solid #754F5B;
+    border-left: 2px solid black;
 }
 
 
 .sideInformation>div {
-    border-top: .5em solid #d0aec1;
-    border-bottom: .5em solid #d0aec1;
+    border-top: .5em solid var(--regionColor);
+    border-bottom: .5em solid var(--regionColor);
 
 }
 
@@ -309,12 +308,12 @@
     max-width: 200px;
     max-height: 200px;
     margin-right: .5em;
-    border: .15em solid #d0aec1;
+    border: .15em solid black;
 }
 
-.tempMap {
-    width: 100%;
-    height: auto;
+.map {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .tags>h3 {
@@ -615,23 +614,23 @@ li a {
 }
 
 .main-title {
-    background: var(--gradient);  
-    color: white;               
-    text-align: center;           
-    padding: 20px 0;              
-    font-size: 32px;            
-   
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+
 }
 
 
 .navbar {
     height: 50px;
-    background: var(--gradient); 
+    background: var(--gradient);
     overflow: hidden;
     display: flex;
     font-size: 10px;
     justify-content: space-around;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar a {
@@ -650,6 +649,7 @@ li a {
     background-color: #0044ff;
     color: white;
 }
+
 /* .navbar :active{
     background-color: #4CAF50; 
     color: white;    
@@ -660,7 +660,7 @@ li a {
     display: flex;
     justify-content: center;
     padding: 15px;
-    background: var(--gradient); 
+    background: var(--gradient);
     position: relative;
 }
 
@@ -670,7 +670,7 @@ li a {
     border: 1px solid #ddd;
     margin-right: 10px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .search-bar button {
@@ -692,9 +692,9 @@ li a {
     overflow: hidden;
     font-size: 10px;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    background: var(--gradient); 
-    padding: 5px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: var(--gradient);
+    padding: 5px 0;
     color: white;
 }
 
@@ -705,8 +705,13 @@ li a {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .suggestions-container {
@@ -715,13 +720,13 @@ li a {
     background-color: #fff;
     border-radius: 0 0 4px 4px;
     position: absolute;
-    top: 78.5%; 
+    top: 78.5%;
     width: auto;
     max-height: 200px;
     overflow-y: auto;
     z-index: 5;
     left: 20.5%;
-    right: 41%; 
+    right: 41%;
     border-radius: 4px;
 }
 
@@ -734,4 +739,3 @@ li a {
 .suggestions-container div:hover {
     background-color: #f6f6f6;
 }
-
