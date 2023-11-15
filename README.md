@@ -6,11 +6,11 @@
 
 # Table of Contents
 
--Installation
--Usage
--Contributing
--Credits
--License 
+#-Installation
+#Usage
+#Contributing
+#Credits
+#License 
 
 # Installation
 This project requires no installation, one can host it locally with VScode.
