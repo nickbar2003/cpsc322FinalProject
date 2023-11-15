@@ -423,9 +423,9 @@ p {
 
 .border2-container h2 {
     font-family: 'Courier New', monospace;
-    font-size: 10px;
+    font-size: 20px;
     background-color: #6b95bf;
-    text-align: end;
+    text-align: center;
     padding: 5px;
 }
 
