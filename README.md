@@ -6,30 +6,35 @@
 
 # Table of Contents
 
-#-Installation
-#Usage
-#Contributing
-#Credits
-#License 
+
+  Installation
+  Usage
+  Contributing
+  Credits
+  Notes
+  License 
 
 # Installation
 This project requires no installation, one can host it locally with VScode.
 
 
 # Usage:
-
+The general usage is as thus: The user will open the webiste and see a featured page with a few featured city travel pages. They will see a navigation bar with links to a planner, calender, and comaprision tool. The user can go to a city page either by searching (by name or attibute e.i. Europe) or the user can click on the city pages in the featured section. The Planenr tool allows the user to make new vaction plans. The user can create and delete hypothetical travel plans. The user can also edit plans in which they can set the number of days for the trip and edit itineraries. The user can add these plans to a calender. In the calender tool the user will be able to add plans to a the calender and view them alongside their itineraries. Lastly the comparision tool will allow a user to compare two city travel pages based on an attribute's rating. The resulting attribute with the higher rating will be displayed with a green marker, and the lower attribute will be shown with red marker Ex: ratings for two different landmarks, the 4/5 landmark will be shown in green, and the 3/5 would be shown in red. 
 
 # Contributing
 This project is not currently seeking public contriubtion, though contribution will not be prevented.
 
 # Credits:
-Nicholas Barinaga (Github: nickbar2003)
+Nicholas Barinaga (Github: https://github.com/nickbar2003)
 Sebastian Mathews (Github: https://github.com/smatthews2)
 Caleb Lefcort (Github: https://github.com/CalebLefcort)
 Danni Du (Github: https://github.com/moyigu)
 Yu Yu Kao (Github: https://github.com/yuyukao2002)
 Yi Lu (Github: https://github.com/YILU0617)
 Austin Tsow (GitHub: https://github.com/austintsow)
+
+# Notes
+Keep in mind this is currently a very very prototype. All of the images are currently just place holders
 
 # License
 
