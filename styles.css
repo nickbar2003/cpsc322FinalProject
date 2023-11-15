@@ -738,4 +738,108 @@ li a {
 
 .suggestions-container div:hover {
     background-color: #f6f6f6;
+<<<<<<< HEAD
+=======
+}
+
+/* (Sebastian Matthews) Calendar Page */
+
+#parisspan, #canadaspan{
+    text-align: center;
+    position: absolute;
+    top: 10;
+    left: 0;
+    max-height: 100%;
+    z-index: 2;
+    border: solid black;
+    padding: 5px;
+}
+
+#parisspan{
+    background-color: orange;
+}
+
+#canadaspan{
+    background-color: teal;
+}
+
+table.calendar, td{
+    font-family: "Times New Roman", monospace;
+    font-size: 15px;
+    text-align: center;
+    border-collapse: collapse;
+    border: solid black;
+    padding: 5px;
+    table-layout: fixed;
+}
+
+td{
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+}
+
+td#outside {
+    color:#B0B0B0
+}
+
+.calendar-page div#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar-page div#main {
+    flex: 0 1 70%;
+}
+
+.calendar-page div#aside {
+    flex: 0 1 30%;
+    margin-left: 30px;
+}
+
+.calendar-page div#main > h2, .calendar-page div#aside > h2{
+    font-family: "Times New Roman", monospace;
+    font-size: 20px;
+    text-align: center;
+    background: var(--gradient);
+    color: white;
+    padding: 5px;
+}
+
+div#paris-trip > h3, div#canada-trip > h3 {
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+div#paris-trip > textarea, div#canada-trip > textarea{
+    resize: none;
+    display: block;
+    margin: 10px;
+}
+
+div#paris-trip{
+    background-color: orange;
+    border: solid black;
+}
+
+div#canada-trip{
+    background-color: teal;
+    border: solid black;
+}
+
+div.aside h3{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+}
+
+table.calendar h4{
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    margin-top: 0px;
+>>>>>>> 849198a9180ec844f28385afbdcd3ab2c44a2563
 }
