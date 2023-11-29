@@ -850,6 +850,7 @@ table.calendar h4 {
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap);
 
 .pe-container {
+  font-family: Inter, sans-serif;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -857,6 +858,7 @@ table.calendar h4 {
 }
 
 .pe-h1 {
+  font-family: Inter, sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   border-radius: 5px;
