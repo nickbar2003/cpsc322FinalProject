@@ -34,17 +34,30 @@
 //     }
 // }
 
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("search").addEventListener("click", searchCity);
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//     document.getElementById("search").addEventListener("click", searchCity);
+// });
 
 
-function searchCity() {
-    cityInput = document.getElementById("searchInput").value;
+// function searchCity() {
+//     cityInput = document.getElementById("searchInput").value;
 
+//     const response = fetch("/city", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(cityInput)
+//     });
 
+//     if (response.ok) {
+//         const results = response.json();
+//         alert("Added song with ID " + results._id);
 
-}
+//     }
+//     else {
+//         console.log('bruh');
+
+//     }
+// }
 
 
 

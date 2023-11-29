@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const app = express();
 const router = express.Router();
 
-const config = require('config.json');
+const config = require('./config.json');
 
 
 // Middleware that parses HTTP requests with JSON body
@@ -15,13 +15,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set("view engine", "ejs");
 
-const connect = mysql.createConnection(config);
+const cn = mysql.createConnection(config);
 
+
+app.get('/', (req, res) => {
+    res.render('featured')
+});
 
 
 app.post('/city', (req, res) => {
     const q = 'SELECT * FROM city WHERE name = ?';
-    const cityName = req.body.cityName; // Retrieve the selected value from the form
+    const cityName = req.body.value; // Retrieve the selected value from the form
 
     cn.connect();
     cn.query(q, [cityName], function (err, rows, fields) {
@@ -30,6 +34,7 @@ app.post('/city', (req, res) => {
             res.status(500).send('Error fetching city data');
             return;
         }
+
         res.render('cityPage', { info: rows });
     });
 });
