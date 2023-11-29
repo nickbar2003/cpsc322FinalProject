@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const app = express();
 const router = express.Router();
 
-const config = require('.config.json');
+const config = require('config.json');
 
 
 // Middleware that parses HTTP requests with JSON body
@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-appu.use(express.json());
+app.use(express.json());
 app.set("view engine", "ejs");
 
 const connect = mysql.createConnection(config);
