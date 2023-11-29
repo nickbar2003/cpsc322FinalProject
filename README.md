@@ -4,6 +4,7 @@
 (modified from WPD1 Abstract)
  A travel website that will allow for a user to assemble a custom vacation plan; cities will have their destination details laid out on their own pages. These can be searched for by direct naming(via a seach-bar entry) or attribute filtering(e.g. affordability, current events, landmarks, etc.). Such pages will contain information relating to the following: activities, food, landmarks, and current events. Additionally, a vacation planner will present a calendar and itinerary that can be modified via the addition or subtraction of destinations, which can be compared between each other alongside a series of variables entered by the user.
 
+
 # Table of Contents
 
 
