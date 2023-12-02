@@ -218,7 +218,7 @@ INSERT INTO city VALUES
     '../resources/taipei_3.jpg', 
     '../resources/taipei_4.jpg', 
     '../resources/taipei_5.jpg', 
-    'map-route-for-taipei'),
+    '115631.42537274353!2d121.47910003627916!3d25.085538824439734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6b61dbbd8b%3A0xbcd1baad5c06a482!2sTaipei%20City%2C%20Taiwan!5e0!3m2!1sen!2sus!4v1701560460848!5m2!1sen!2sus'),
 
 -- Seattle
     ('seattle', 
@@ -257,11 +257,11 @@ INSERT INTO city VALUES
     8, 
     'France', 
     'Europe', 
-    '../resources/paris_1.jpg', 
-    '../resources/paris_2.jpg', 
-    '../resources/paris_3.jpg', 
-    '../resources/paris_4.jpg', 
-    '../resources/paris_5.jpg', 
+    '../resources/paris_1.jpeg', 
+    '../resources/paris_2.jpeg', 
+    '../resources/paris_3.jpeg', 
+    '../resources/paris_4.jpeg', 
+    '../resources/paris_5.jpeg', 
     '83998.77824558054!2d2.2646347688343123!3d48.858938434706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1701560172500!5m2!1sen!2sus'),
 
 -- Seoul
