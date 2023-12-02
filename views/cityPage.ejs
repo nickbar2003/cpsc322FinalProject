@@ -19,13 +19,10 @@
             <a href="country_comparison.html">Comparison</a>
             <a href="calendar.html">Calendar</a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
-            <button type="submit">Search</button>
-            <div id="suggestions" class="suggestions-container">
-
-            </div>
-        </div>
+        <form class="search-bar" action="/city" method="POST">
+            <input type="text" name="value">
+            <button type="submit">Enter</button>
+        </form>
         <section class="cityWrapper">
             <h1 class="cityName">
                 <%= city.name %>
@@ -35,10 +32,12 @@
                     <div class="currentEvents">
                         <div class="infoBlock">
                             <h2>
-                                <%= city.currentEventsTitle %>
+                                Upcoming Events
                             </h2>
                             <img src=<%=city.url1 %> alt="" class="infoPic">
-                            <h4 class="event-item">Gonzaga Men's BasketBall Game</h4>
+                            <h4 class="event-item">
+                                <%= city.currentEventsTitle %>
+                            </h4>
                             <p>
                                 <%= city.currentEventsDes %>
                             </p>
@@ -48,10 +47,13 @@
                     <div class="sites">
                         <div class="infoBlock">
                             <h2>Sites to See</h2>
-                            <img src="resources/spokanepic.jpg" alt="" class="infoPic">
-                            <h4 class="site-item">Tne Garbage Goat</h4>
+                            <img src=<%=city.url2 %> alt="" class="infoPic">
+                            <h4 class="site-item">
+                                <%= city.landmarkTitle %>
+
+                            </h4>
                             <p>
-                                <%= city.landmarksDes %>
+                                <%= city.landmarkDes %>
                             </p>
                         </div>
                     </div>
@@ -59,8 +61,10 @@
                         <div class="infoBlock">
 
                             <h2>Fun Activites</h2>
-                            <img src="resources/spokanepic.jpg" alt="" class="infoPic">
-                            <h4 class="activities-item">Ice Skating</h4>
+                            <img src=<%=city.url3 %> alt="" class="infoPic">
+                            <h4 class="activities-item">
+                                <%= city.activitiesTitle %>
+                            </h4>
                             <p>
                                 <%= city.activitiesDes %>
                             </p>
@@ -69,8 +73,10 @@
                     <div class="cuisine">
                         <div class="infoBlock">
                             <h2>Popular Cuisine</h2>
-                            <img src="<%= city.url1 %>" alt="" class="infoPic">
-                            <h4 class="cusine-item">Flying Goat Pizza</h4>
+                            <img src="<%=city.url4%>" alt="" class="infoPic">
+                            <h4 class="cusine-item">
+                                <%= city.cuisineTitle %>
+                            </h4>
                             <p>
                                 <%= city.cuisineDes %>
                             </p>
@@ -82,7 +88,7 @@
                 <div class="sideInformation">
 
                     <div class="tags">
-                        <h3>Tags</h3>
+                        <h3>Info</h3>
                         <ul class="tagList">
                             <li class="tag">
                                 <%= city.country %>
@@ -90,15 +96,26 @@
                             <li class="tag">
                                 <%= city.region %>
                             </li>
+                            <li class="tag">
+                                Housing Rating:
+                                <%= city.housingScore %>
+                            </li>
+                            <li class="tag">
+                                Food Rating:
+                                <%= city.foodScore %>
+                            </li>
+                            <li class="tag">
+                                Lankmark Rating:
+                                <%= city.landmarkScore %>
+                            </li>
                         </ul>
                     </div>
                     <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85970.93640374066!2d-117.5363705680355!3d47.672926546277445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e185c30bbe7e5%3A0xddfcc9d60b84d9b1!2sSpokane%2C%20WA!5e0!3m2!1sen!2sus!4v1699587224948!5m2!1sen!2sus"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d<%= city.mapRoute %>"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="cityPic"><img src="<%= city.url1 %>" alt="cityPicture" class="cityPic">
+                    <div class="cityPic"><img src="<%= city.url5 %>" alt="cityPicture" class="cityPic">
                     </div>
                 </div>
 

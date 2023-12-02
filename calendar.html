@@ -18,15 +18,12 @@
       <a href="country_comparison.html">Composition</a>
       <a href="calendar.html">Calendar</a>
    </div>
-   
-   <div class="search-bar">
-      <input type="text" placeholder="Search..." id="searchInput" oninput="updateSuggestions()">
-      <button type="submit">Search</button>
-      <div id="suggestions" class="suggestions-container">
 
-      </div>
-   </div>
-   
+   <form class="search-bar" action="/city" method="POST">
+      <input type="text" name="value">
+      <button type="submit">Enter</button>
+   </form>
+
    <div id="header">
       <h1 class="textlogo">Calendar</h1>
    </div>
@@ -183,7 +180,7 @@
          <button id="hidetextcanada" type="button">Toggle Visibility(Canada Itineraries)</button>
       </div>
    </div>
-   
+
    <script>
       const btn1 = document.getElementById('hidetextparis');
       const btn2 = document.getElementById('hidetextcanada');
