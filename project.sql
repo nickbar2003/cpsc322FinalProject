@@ -262,7 +262,7 @@ INSERT INTO city VALUES
     '../resources/paris_3.jpg', 
     '../resources/paris_4.jpg', 
     '../resources/paris_5.jpg', 
-    'map-route-for-paris'),
+    '83998.77824558054!2d2.2646347688343123!3d48.858938434706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1701560172500!5m2!1sen!2sus'),
 
 -- Seoul
     ('seoul', 
@@ -284,8 +284,9 @@ INSERT INTO city VALUES
     '../resources/seoul_3.jpg', 
     '../resources/seoul_4.jpg', 
     '../resources/seoul_5.jpg', 
-    'map-route-for-seoul'),
+    '202404.91416869406!2d126.80933125064267!3d37.56503371436911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul%2C%20South%20Korea!5e0!3m2!1sen!2sus!4v1701560213687!5m2!1sen!2sus'),
 
+-- Las Vegas
     ('las vegas', 
     'Casino and Show Extravaganza', 
     'Experience the thrill of world-class casinos and spectacular shows in Las Vegas, the entertainment capital of the world, known for its vibrant nightlife.',
@@ -305,7 +306,7 @@ INSERT INTO city VALUES
     '../resources/lasvegas_3.jpg', 
     '../resources/lasvegas_4.jpg', 
     '../resources/lasvegas_5.jpg', 
-    'map-route-for-lasvegas'),
+    '206252.80376246953!2d-115.33980828459258!3d36.125164461117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1701560252892!5m2!1sen!2sus'),
 
 -- Vancouver
     ('vancouver', 
@@ -327,7 +328,7 @@ INSERT INTO city VALUES
     '../resources/vancouver_3.jpg', 
     '../resources/vancouver_4.jpg', 
     '../resources/vancouver_5.jpg', 
-    'map-route-for-vancouver'),
+    '166655.68220692824!2d-123.43571134195614!3d49.257540029521195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sus!4v1701560297555!5m2!1sen!2sus'),
 
 -- Amsterdam
     ('amsterdam', 
@@ -349,5 +350,5 @@ INSERT INTO city VALUES
     '../resources/amsterdam_3.jpg', 
     '../resources/amsterdam_4.jpg', 
     '../resources/amsterdam_5.jpg', 
-    'map-route-for-amsterdam');
+    '155959.26467683155!2d4.7391552253392994!3d52.354760727432804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1701560326669!5m2!1sen!2sus');
 
