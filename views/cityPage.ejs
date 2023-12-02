@@ -34,8 +34,10 @@
                 <div class="mainInformation">
                     <div class="currentEvents">
                         <div class="infoBlock">
-                            <h2>Upcoming Events</h2>
-                            <img src="resources/minecraftBst.jpg" alt="" class="infoPic">
+                            <h2>
+                                <%= city.currentEventsTitle %>
+                            </h2>
+                            <img src=<%=city.url1 %> alt="" class="infoPic">
                             <h4 class="event-item">Gonzaga Men's BasketBall Game</h4>
                             <p>
                                 <%= city.currentEventsDes %>
@@ -49,7 +51,7 @@
                             <img src="resources/spokanepic.jpg" alt="" class="infoPic">
                             <h4 class="site-item">Tne Garbage Goat</h4>
                             <p>
-                                <%= city.activitiesDes %>
+                                <%= city.landmarksDes %>
                             </p>
                         </div>
                     </div>
@@ -59,17 +61,19 @@
                             <h2>Fun Activites</h2>
                             <img src="resources/spokanepic.jpg" alt="" class="infoPic">
                             <h4 class="activities-item">Ice Skating</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>
+                                <%= city.activitiesDes %>
+                            </p>
                         </div>
                     </div>
                     <div class="cuisine">
                         <div class="infoBlock">
                             <h2>Popular Cuisine</h2>
-                            <img src="resources/minecraftBst.jpg" alt="" class="infoPic">
+                            <img src="<%= city.url1 %>" alt="" class="infoPic">
                             <h4 class="cusine-item">Flying Goat Pizza</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>
+                                <%= city.cuisineDes %>
+                            </p>
                         </div>
                     </div>
 
@@ -94,7 +98,7 @@
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="cityPic"><img src="resources/spokanepic.jpg" alt="cityPicture" class="cityPic">
+                    <div class="cityPic"><img src="<%= city.url1 %>" alt="cityPicture" class="cityPic">
                     </div>
                 </div>
 
