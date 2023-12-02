@@ -235,12 +235,12 @@ INSERT INTO city VALUES
     8, 
     'United States', 
     'North America', 
-    '../resources/seattle_1.jpg', 
-    '../resources/seattle_2.jpg', 
-    '../resources/seattle_3.jpg', 
-    '../resources/seattle_4.jpg', 
-    '../resources/seattle_5.jpg', 
-    'map-route-for-seattle'),
+    '../resources/seattle_1.jpeg', 
+    '../resources/seattle_2.jpeg', 
+    '../resources/seattle_3.jpeg', 
+    '../resources/seattle_4.jpeg', 
+    '../resources/seattle_5.jpeg', 
+    '172138.71746951443!2d-122.50687058105055!3d47.61315544106176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1701559697569!5m2!1sen!2sus'),
 
 -- Paris
     ('paris', 
