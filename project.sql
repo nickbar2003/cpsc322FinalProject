@@ -64,7 +64,7 @@ INSERT INTO city VALUES
     '../resources/beijing_3.jpg', 
     '../resources/beijing_4.jpg', 
     '../resources/beijing_5.jpg', 
-    'map-route-for-beijing'),
+    '783209.3059920374!2d115.14892524206812!3d39.93218757149541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296e7142cb9%3A0xb9625620af0fa98a!2sBeijing%2C%20China!5e0!3m2!1sen!2sus!4v1701560087882!5m2!1sen!2sus'),
 
 -- Tokyo
     ('tokyo', 
@@ -86,7 +86,7 @@ INSERT INTO city VALUES
     '../resources/tokyo_3.jpg', 
     '../resources/tokyo_4.jpg', 
     '../resources/tokyo_5.jpg', 
-    'map-route-for-tokyo'),
+    '1662975.6166647843!2d138.45059145303637!3d35.50429674167073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sus!4v1701562757812!5m2!1sen!2sus'),
 
 -- London
     ('london', 
@@ -108,7 +108,7 @@ INSERT INTO city VALUES
     '../resources/london_3.jpg', 
     '../resources/london_4.jpg', 
     '../resources/london_5.jpg', 
-    'map-route-for-london'),
+    '158857.83988691686!2d-0.26640400518779794!3d51.528739804975075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1701562797070!5m2!1sen!2sus'),
 
 -- Moscow
     ('moscow', 
@@ -130,7 +130,7 @@ INSERT INTO city VALUES
     '../resources/moscow_3.jpg', 
     '../resources/moscow_4.jpg', 
     '../resources/moscow_5.jpg', 
-    'map-route-for-moscow'),
+    '577399.7600159674!2d36.13746647639296!3d55.57646416826437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z5L-E572X5pav6I6r5pav56eR!5e0!3m2!1szh-CN!2sus!4v1701562822063!5m2!1szh-CN!2sus'),
 
 -- Los Angeles
     ('los angeles', 
@@ -152,7 +152,7 @@ INSERT INTO city VALUES
     '../resources/losangeles_3.jpg', 
     '../resources/losangeles_4.jpg', 
     '../resources/losangeles_5.jpg', 
-    'map-route-for-losangeles'),
+    '423284.04411864537!2d-118.7413771714026!3d34.0206084654507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1701562850413!5m2!1sen!2sus'),
 
 -- Barcelona
     ('barcelona', 
@@ -174,7 +174,7 @@ INSERT INTO city VALUES
     '../resources/barcelona_3.jpg', 
     '../resources/barcelona_4.jpg', 
     '../resources/barcelona_5.jpg', 
-    'map-route-for-barcelona'),
+    '95780.47786896888!2d2.057787855192586!3d41.39276734310336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2z6KW_54-t54mZ5be05aGe572X57qz5be05aGe572X6YKj!5e0!3m2!1szh-CN!2sus!4v1701562872135!5m2!1szh-CN!2sus'),
 
 -- Hong Kong
     ('hong kong', 
@@ -196,7 +196,7 @@ INSERT INTO city VALUES
     '../resources/hongkong_3.jpg', 
     '../resources/hongkong_4.jpg', 
     '../resources/hongkong_5.jpg', 
-    'map-route-for-hongkong'),
+    '236161.13633206897!2d113.97458992867683!3d22.352958430897473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403e2eda332980f%3A0xf08ab3badbeac97c!2sHong%20Kong!5e0!3m2!1sen!2sus!4v1701562876332!5m2!1sen!2sus'),
 
 -- Taipei
     ('taipei', 
