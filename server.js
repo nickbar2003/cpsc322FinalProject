@@ -24,6 +24,17 @@ app.get('/', (req, res) => {
     res.render('featured')
 });
 
+app.get('/plannerOverview', (req, res) => {
+    res.render('plannerOverviewPage')
+});
+
+app.get('/country_comparison', (req, res) => {
+    res.render('country_comparison')
+});
+
+app.get('/calendar', (req, res) => {
+    res.render('calendar')
+});
 
 app.post('/city', (req, res) => {
     const q = 'SELECT * FROM city WHERE name = ?';

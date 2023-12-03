@@ -14,15 +14,16 @@
             <p>Welcome to Our Travel Website! Explore the World with Us!</p>
         </div>
         <div class="navbar">
-            <a href="featured.html">Feature</a>
-            <a href="plannerOverviewPage.html">Planner</a>
-            <a href="country_comparison.html">Comparison</a>
-            <a href="calendar.html">Calendar</a>
+            <a href="/">Feature</a>
+            <a href="/plannerOverview">Planner</a>
+            <a href="/country_comparison">Comparison</a>
+            <a href="/calendar">Calendar</a>
         </div>
         <form class="search-bar" action="/city" method="POST">
             <input type="text" name="value">
             <button type="submit">Enter</button>
         </form>
+
         <section class="cityWrapper">
             <h1 class="cityName">
                 <%= city.name %>
@@ -105,7 +106,7 @@
                                 <%= city.foodScore %>
                             </li>
                             <li class="tag">
-                                Lankmark Rating:
+                                Landmark Rating:
                                 <%= city.landmarkScore %>
                             </li>
                         </ul>
