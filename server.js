@@ -1,5 +1,6 @@
 const express = require("express");
 const mysql = require('mysql2');
+const functions = require('./public/functions')
 
 const app = express();
 const router = express.Router();
@@ -21,7 +22,7 @@ const cn = mysql.createConnection(config);
 
 
 app.get('/', (req, res) => {
-    const q = 'SELECT * FROM city LIMIT 3';
+    const q = 'SELECT * FROM city ORDER BY RAND() LIMIT 5';
     cn.connect();
     cn.query(q, function (err, rows, fields) {
         if (err) {
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
             return;
         }
 
-        res.render('featured', { info: rows })
+        res.render('featured', { info: rows, functions: functions })
     });
     
 });
