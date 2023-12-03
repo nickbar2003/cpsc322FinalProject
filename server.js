@@ -64,6 +64,46 @@ app.post('/city', (req, res) => {
     });
 });
 
+app.post('/populated_comparison', (req, res) => {
+    const { city1, city2 } = req.body; // Retrieve player names from the form inputs
+
+    if (!city1 || !city2) {
+        res.status(400).send('Please enter both city names.');
+        return;
+    }
+
+    const q = 'SELECT * FROM city WHERE name = ?';
+    const cities = [];
+
+    // Function to handle querying player data and rendering after both queries are done
+    const handleQuery = (cityName, index) => {
+        cn.query(q, [cityName], (err, rows, fields) => {
+            if (err) {
+                console.log(`Error fetching city ${cityName}:`, err);
+                res.status(500).send(`Error fetching city ${cityName}`);
+                return;
+            }
+
+            if (rows.length === 0) {
+                console.log(`city ${cityName} not found.`);
+                res.status(404).send(`city ${cityName} not found`);
+                return;
+            }
+
+            cities.push(rows[0]); // Add city data to the cities array
+
+            if (index === 1) {
+                // If both cities' data has been retrieved, render the EJS file
+                res.render('populated_comparison', { cities });
+            }
+        });
+    };
+
+    // Handle querying data for city1 and city2
+    handleQuery(city1, 0);
+    handleQuery(city2, 1);
+});
+
 // router.use(bodyParser.urlencoded(
 //     { extended: false }));
 // router.use("/api", require("./api/users"));
