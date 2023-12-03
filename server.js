@@ -21,7 +21,18 @@ const cn = mysql.createConnection(config);
 
 
 app.get('/', (req, res) => {
-    res.render('featured')
+    const q = 'SELECT * FROM city LIMIT 3';
+    cn.connect();
+    cn.query(q, function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+
+        res.render('featured', { info: rows })
+    });
+    
 });
 
 app.get('/plannerOverview', (req, res) => {
