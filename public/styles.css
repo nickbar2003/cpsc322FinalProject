@@ -226,7 +226,7 @@
     flex: 0 1 70%;
 }
 
-#cityName {
+#cityName>form>button {
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
