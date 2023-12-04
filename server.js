@@ -68,6 +68,22 @@ app.post('/city', (req, res) => {
     });
 });
 
+app.post('/savePlan', (req, res) => {
+    const q = 'UPDATE * FROM plan WHERE name = ?';
+    const planName = req.body.value; // Retrieve the selected value from the form
+
+    cn.connect();
+    cn.query(q, [planName], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+
+        res.render('cityPage', { info: rows });
+    });
+});
+
 // router.use(bodyParser.urlencoded(
 //     { extended: false }));
 // router.use("/api", require("./api/users"));

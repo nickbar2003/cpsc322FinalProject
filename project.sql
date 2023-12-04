@@ -22,6 +22,14 @@ CREATE TABLE city  (
     mapRoute VARCHAR(255)
 );
 
+CREATE TABLE plan (
+    name VARCHAR(255) PRIMARY KEY,
+    destination VARCHAR(255),
+    startDate DATE,
+    endDate DATE,
+    activities TEXT,
+    notes TEXT
+);
 INSERT INTO city VALUES
     ('spokane', 
     'Gonzaga Basketball', 
