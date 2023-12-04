@@ -35,9 +35,35 @@ app.get('/', (req, res) => {
     
 });
 
+
+
+
+app.post('/search_city', (req, res) => {
+    const cityName = req.body.cityName;
+    const query = 'SELECT  Food, Landmark, Housing FROM country_comparison WHERE name = ?';
+
+    cn.execute(query, [cityName], function(err, results) {
+        if (err) {
+            console.error('Error: ', err);
+            res.status(500).send('Error fetching data');
+            return;
+        }
+
+        if (results.length > 0) {
+            res.json(results[0]);
+        } else {
+            res.status(404).send('City not found');
+        }
+    });
+});
+
+
+
 app.get('/plannerOverview', (req, res) => {
     res.render('plannerOverviewPage')
 });
+
+
 
 app.get('/country_comparison', (req, res) => {
     res.render('country_comparison')
@@ -45,6 +71,10 @@ app.get('/country_comparison', (req, res) => {
 
 app.get('/calendar', (req, res) => {
     res.render('calendar')
+});
+
+app.get('/feature', (req, res) => {
+    res.render('featured')
 });
 
 app.post('/city', (req, res) => {
