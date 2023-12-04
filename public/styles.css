@@ -776,8 +776,9 @@ div#itinerary>h3 {
     padding: 5px;
 }
 
-div#itinerary>textarea {
+.calendar-page div#itinerary textarea {
     resize: none;
+    width: 93.5%;
     display: block;
     margin: 10px;
 }
