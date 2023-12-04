@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
-      headerToolbar: {
-        center: 'addEventButton'
-      },
       events: [ //Preload events into calendar(these will eventually be populated with user plans).
         {
           title: 'All Day Event',
