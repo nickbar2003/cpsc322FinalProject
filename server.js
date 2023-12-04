@@ -48,6 +48,10 @@ app.get('/calendar', (req, res) => {
     res.render('calendar')
 });
 
+app.get('/plan-editor', (req, res) => {
+    res.render('plan-editor')
+});
+
 app.post('/city', (req, res) => {
     const q = 'SELECT * FROM city WHERE name = ?';
     const cityName = req.body.value; // Retrieve the selected value from the form
