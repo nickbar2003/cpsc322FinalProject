@@ -870,3 +870,9 @@ textarea {
     color: white;
     text-decoration: none;
 }
+.better {
+    color: green;
+}
+.worse {
+    color: red;
+}

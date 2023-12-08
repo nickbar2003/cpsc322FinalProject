@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="description" content="Comparison page">
+</head>
+<body>
+    <div class="main-title">Comparison Page</div>
+    <div class="marquee">
+        <p>Welcome to Our Travel Website! Explore the World with Us!</p>
+    </div>
+    <div class="navbar">
+        <a href="/">Feature</a>
+        <a href="/plannerOverview">Planner</a>
+        <a href="/country_comparison">Comparison</a>
+        <a href="/calendar">Calendar</a>
+    </div>
+    <div class="border-container">
+        <% const city1 = cities[0] %>
+        <% const city2 = cities[1] %>
+        <div class="content-box">
+            <h2 class="textlogo"><%= city1.name %></h2>
+            <div id="atrributes">
+                <p>
+                    Food Score: 
+                    <% if (city1.foodScore > city2.foodScore) { %>
+                        <span class="better"><%= city1.foodScore %></span>
+                    <% } else if (city1.foodScore < city2.foodScore) { %>
+                        <span class="worse"><%= city1.foodScore %></span>
+                    <% } else { %>
+                        <%= city1.foodScore %>
+                    <% } %>
+                </p>
+                <p>
+                    Landmark Score: 
+                    <% if (city1.landmarkScore > city2.landmarkScore) { %>
+                        <span class="better"><%= city1.landmarkScore %></span>
+                    <% } else if (city1.landmarkScore < city2.landmarkScore) { %>
+                        <span class="worse"><%= city1.landmarkScore %></span>
+                    <% } else { %>
+                        <%= city1.landmarkScore %>
+                    <% } %>
+                </p>
+                <p>
+                    Housing Score: 
+                    <% if (city1.housingScore > city2.housingScore) { %>
+                        <span class="better"><%= city1.housingScore %></span>
+                    <% } else if (city1.housingScore < city2.housingScore) { %>
+                        <span class="worse"><%= city1.housingScore %></span>
+                    <% } else { %>
+                        <%= city1.housingScore %>
+                    <% } %>
+                </p>
+            </div>
+            <div id="pics">
+                <img src="<%= city1.url1 %>" alt="<%= city1.name %>'s Image" width="100%" height="auto">
+            </div>
+        </div>
+        <div class="content-box">
+            <h2 class="textlogo"><%= city2.name %></h2>
+            <div id="atrributes">
+                <p>
+                    Food Score: 
+                    <% if (city2.foodScore > city1.foodScore) { %>
+                        <span class="better"><%= city2.foodScore %></span>
+                    <% } else if (city2.foodScore < city1.foodScore) { %>
+                        <span class="worse"><%= city2.foodScore %></span>
+                    <% } else { %>
+                        <%= city2.foodScore %>
+                    <% } %>
+                </p>
+                <p>
+                    Landmark Score: 
+                    <% if (city2.landmarkScore > city1.landmarkScore) { %>
+                        <span class="better"><%= city2.landmarkScore %></span>
+                    <% } else if (city2.landmarkScore < city1.landmarkScore) { %>
+                        <span class="worse"><%= city2.landmarkScore %></span>
+                    <% } else { %>
+                        <%= city2.landmarkScore %>
+                    <% } %>
+                </p>
+                <p>
+                    Housing Score: 
+                    <% if (city2.housingScore > city1.housingScore) { %>
+                        <span class="better"><%= city2.housingScore %></span>
+                    <% } else if (city2.housingScore < city1.housingScore) { %>
+                        <span class="worse"><%= city2.housingScore %></span>
+                    <% } else { %>
+                        <%= city2.housingScore %>
+                    <% } %>
+                </p>
+            </div>
+            <div id="pics">
+                <img src="<%= city2.url1 %>" alt="<%= city2.name %>'s Image" width="100%" height="auto">
+            </div>
+        </div>
+
+    </div>
+</body>
