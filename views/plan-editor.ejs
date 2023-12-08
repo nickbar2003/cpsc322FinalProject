@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <% const plan=info[0] %>
     <div class="pe-container">
-        <a href="plannerOverviewPage.html" class="back-button">Back</a>
-        <h1 class="pe-h1">Plan Editor</h1>
-        <form id="plan-form">
+        <a href="/plannerOverview" class="back-button">Back</a>
+        <h1 class="pe-h1"><%= plan.name %></h1>
+        <form id="plan-form" action="/savePlan" method="POST">
             <div class="form-group">
                 <label for="destination">Destination:</label>
-                <input type="text" id="destination" name="destination" value="Seattle" readonly>
+                <input type="text" id="destination" name="destination" value="<%= plan.destination %>" readonly>
             </div>
             <div class="form-group">
                 <label for="start-date">Start Date:</label>
-                <input type="date" id="start-date" name="startDate">
+                <input type="date" id="start-date" name="startDate" value="<%= plan.startDate %>">
             </div>
             <div class="form-group">
                 <label for="end-date">End Date:</label>
-                <input type="date" id="end-date" name="endDate">
+                <input type="date" id="end-date" name="endDate" value="<%= plan.endDate %>">
             </div>
             <div class="form-group">
                 <label for="activities">Activities:</label>
-                <textarea id="activities" name="activities" rows="5"></textarea>
+                <textarea id="activities" name="activities" rows="5"><%= plan.activities %></textarea>
             </div>
             <div class="form-group">
                 <label for="notes">Notes:</label>
-                <textarea id="notes" name="notes" rows="5"></textarea>
+                <textarea id="notes" name="notes" rows="5"><%= plan.notes %></textarea>
             </div>
-            <button type="submit" class="pe-button">Save Plan</button>
+            <button type="submit" class="pe-button" name = "plan" value="<%= plan.name %>">Save Plan</button>
         </form>
     </div>
 </body>

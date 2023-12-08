@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS plan;
 DROP TABLE IF EXISTS city;
 CREATE TABLE city  (
     name VARCHAR(255) PRIMARY KEY,
@@ -22,6 +23,15 @@ CREATE TABLE city  (
     mapRoute VARCHAR(255)
 );
 
+CREATE TABLE plan (
+    name VARCHAR(255) PRIMARY KEY,
+    destination VARCHAR(255),
+    startDate VARCHAR(255),
+    endDate VARCHAR(255),
+    activities TEXT,
+    notes TEXT,
+    FOREIGN KEY (destination) REFERENCES city(name)
+);
 INSERT INTO city VALUES
     ('spokane', 
     'Gonzaga Basketball', 
@@ -352,3 +362,8 @@ INSERT INTO city VALUES
     '../resources/amsterdam_5.jpeg', 
     '155959.26467683155!2d4.7391552253392994!3d52.354760727432804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1701560326669!5m2!1sen!2sus');
 
+INSERT INTO plan (name, destination, startDate, endDate, activities, notes)
+VALUES 
+    ('SpokaneTrip', 'Spokane', '2023-01-15', '2023-01-20', 'Hiking, Sightseeing', 'Remember to pack warm clothes.'),
+    ('TokyoTrip', 'Tokyo', '2023-04-10', '2023-04-20', 'Visit museums, try local cuisine', 'Check out the transportation options beforehand.'),
+    ('SeattleTrip', 'Seattle', '2023-06-05', '2023-06-10', 'Visit Space Needle, explore markets', 'Book accommodation near downtown.');

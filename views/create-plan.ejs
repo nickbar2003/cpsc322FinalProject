@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pe-container">
+        <a href="/plannerOverview" class="back-button">Back</a>
+        <h1 class="pe-h1">Create Plan</h1>
+        <form id="plan-form" action="/makePlan" method="POST">
+            <div class="form-group">
+                <label for="planName">Plan Name:</label>
+                <input type="text" id="planName" name="planName">
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination">
+            </div>
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="startDate">
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="endDate">
+            </div>
+            <div class="form-group">
+                <label for="activities">Activities:</label>
+                <textarea id="activities" name="activities" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" rows="5"></textarea>
+            </div>
+            <button type="submit" class="pe-button">Save Plan</button>
+        </form>
+    </div>
+</body>
+</html>

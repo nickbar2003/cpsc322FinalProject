@@ -37,15 +37,47 @@ app.get('/', (req, res) => {
 });
 
 app.get('/plannerOverview', (req, res) => {
-    res.render('plannerOverviewPage')
+    const q = 'SELECT * FROM plan ORDER BY name';
+    cn.connect();
+    cn.query(q, function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+
+        res.render('plannerOverviewPage', { info: rows });
+    });
+});
+
+app.post('/deletePlan', (req, res) => {
+    const q = 'Delete FROM plan WHERE name = ?';
+    const planName = req.body.value;
+    cn.connect();
+    cn.query(q,[planName], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+        res.redirect("/plannerOverview")
+    });
 });
 
 app.get('/country_comparison', (req, res) => {
     res.render('country_comparison')
 });
 
+app.get('/create-plan', (req, res) => {
+    res.render('create-plan')
+});
+
 app.get('/calendar', (req, res) => {
     res.render('calendar')
+});
+
+app.get('/plan-editor', (req, res) => {
+    res.render('plan-editor')
 });
 
 app.post('/city', (req, res) => {
@@ -63,6 +95,7 @@ app.post('/city', (req, res) => {
         res.render('cityPage', { info: rows });
     });
 });
+
 
 app.post('/populated_comparison', (req, res) => {
     const { city1, city2 } = req.body; // Retrieve player names from the form inputs
@@ -104,6 +137,62 @@ app.post('/populated_comparison', (req, res) => {
     handleQuery(city2, 1);
 });
 
+
+app.post('/savePlan', (req, res) => {
+    const q = 'UPDATE plan SET destination = ?,startDate = ?, endDate = ?, activities = ?, notes = ? WHERE name = ?';
+    const destination = req.body.destination;
+    const startDate = req.body.startDate;
+    const endDate = req.body.endDate;
+    const activities = req.body.activities;
+    const notes = req.body.notes;
+    const plan = req.body.plan;
+
+    cn.connect();
+    cn.query(q, [destination, startDate, endDate, activities, notes, plan], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+        res.redirect("/plannerOverview")
+    });
+});
+
+app.post('/makePlan', (req, res) => {
+    const q = 'INSERT INTO plan VALUES (?,?,?,?,?,?);';
+    const destination = req.body.destination;
+    const startDate = req.body.startDate;
+    const endDate = req.body.endDate;
+    const activities = req.body.activities;
+    const notes = req.body.notes;
+    const plan = req.body.planName;
+
+    cn.connect();
+    cn.query(q, [ plan, destination, startDate, endDate, activities, notes], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+        res.redirect("/plannerOverview")
+    });
+});
+
+app.post('/plan-editor', (req, res) => {
+    const q = 'SELECT * FROM plan WHERE name = ?';
+    const planName = req.body.value; // Retrieve the selected value from the form
+
+    cn.connect();
+    cn.query(q, [planName], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching plan data');
+            return;
+        }
+
+        res.render('plan-editor', { info: rows });
+    });
+});
 // router.use(bodyParser.urlencoded(
 //     { extended: false }));
 // router.use("/api", require("./api/users"));
