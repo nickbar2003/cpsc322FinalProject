@@ -73,7 +73,17 @@ app.get('/create-plan', (req, res) => {
 });
 
 app.get('/calendar', (req, res) => {
-    res.render('calendar')
+    const q = 'SELECT * FROM plan ORDER BY name';
+    cn.connect();
+    cn.query(q, function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+
+        res.render('calendar', { info: rows });
+    });
 });
 
 app.get('/plan-editor', (req, res) => {

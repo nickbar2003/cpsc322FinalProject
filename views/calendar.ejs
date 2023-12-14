@@ -7,7 +7,6 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
    <!--The https://fullcalendar.io/ library is used to construct the calendar on the page-->
    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script> 
-   <script src="calendar.js"></script>
 </head>
 
 <body class="calendar-page">
@@ -29,6 +28,26 @@
 
    <div id="header">
       <h1 class="textlogo">Calendar</h1>
+      <script>
+
+         document.addEventListener('DOMContentLoaded', function() {
+         var calendarEl = document.getElementById('calendar');
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+         });
+
+         <% info.forEach(plan => { %>
+            calendar.addEvent({
+               title: '<%= plan.name %>',
+               start: '<%= plan.startDate %>',
+               end: '<%= plan.endDate %>',
+               color: '#6b95bf'
+            });
+         <% }) %>
+
+         calendar.render();
+         });
+      </script>
    </div>
 
    <div id="container">
@@ -37,5 +56,51 @@
       </div>
       <div id="aside">
          <h2>Itineraries</h2>
+         <% info.forEach(plan => { %>
+            <div class="itinerary">
+               <h3><%= plan.name %></h3>
+               <h4>Activities</h4>
+               <textarea cols="20" rows="12" readonly><%= plan.activities %></textarea>
+               <h4>Notes</h4>
+               <textarea cols="20" rows="12" readonly><%= plan.notes %></textarea>
+            </div>
+            <button class="toggle" onclick="toggleVisibility(this.id)">Toggle Visibility for <%= plan.name %></button>
+            <br>
+
+        <% }) %>
    </div>
+   <script>
+      // Getting the itinerary and button elements.
+      var itineraries = document.getElementsByClassName("itinerary");
+      var buttons = document.getElementsByClassName("toggle");
+
+      // Looping over itineraries and buttons...
+      for (var i = 0; i < itineraries.length; i++) {
+
+         //...and get the i'th itinerary/button.
+         var itinerary = itineraries[i];
+         var button = buttons[i];
+         
+         // Set their ids dynamically.
+         itinerary.id = "itinerary-" + i;
+         console.log(itinerary.id.match(/\d+$/)[0]);
+         button.id = "toggle-" + i;
+         console.log(button.id.match(/\d+$/)[0]);
+      }
+
+      function toggleVisibility(clicked){
+         clicked.match(/\d+$/)[0]
+         for(var i = 0; i < itineraries.length; i++){
+            var itinerary = itineraries[i];
+            if(i == clicked.match(/\d+$/)[0]){
+               itinerary.style.display = 'block';
+            }else{
+               itinerary.style.display = 'none';
+            }
+         }
+      }
+
+      console.log(itineraries);
+      console.log(buttons);
+  </script>
 </body>

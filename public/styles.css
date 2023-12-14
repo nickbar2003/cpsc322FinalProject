@@ -743,8 +743,6 @@ li a {
 
 /* (Sebastian Matthews) Calendar Page */
 
-/* (Sebastian Matthews) Calendar Page */
-
 .calendar-page div#container {
     display: flex;
     flex-direction: row;
@@ -769,14 +767,14 @@ li a {
     padding: 5px;
 }
 
-div#itinerary>h3 {
+div.itinerary>h3 {
     font-family: "Courier New", monospace;
     font-size: 20px;
     text-align: center;
     padding: 5px;
 }
 
-.calendar-page div#itinerary textarea {
+.calendar-page div.itinerary textarea {
     resize: none;
     width: 93.5%;
     display: block;
@@ -789,15 +787,16 @@ div.aside h3 {
     margin: 10px;
 }
 
-table.calendar h4 {
+div.itinerary>h4 {
     font-family: "Courier New", monospace;
     font-size: 14px;
-    margin-top: 0px;
+    margin: 0px 0px 0px 10px;
 }
 
-div#itinerary {
-    background-color: teal;
+div.itinerary {
+    background-color: #6b95bf;
     border: solid black;
+    display: none;
 }
 
 /* (Austin Tsow) Plan Editor*/
