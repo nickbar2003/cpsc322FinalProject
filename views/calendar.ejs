@@ -36,14 +36,14 @@
             initialView: 'dayGridMonth',
          });
 
-         <% info.forEach(plan => { %>
-            calendar.addEvent({
-               title: '<%= plan.name %>',
-               start: '<%= plan.startDate %>',
-               end: '<%= plan.endDate %>',
-               color: '#6b95bf'
-            });
-         <% }) %>
+      <% info.forEach(plan => { %>
+         calendar.addEvent({
+            title: '<%= plan.name %>',
+            start: '<%= plan.startDate %>',
+            end: '<%= plan.endDate %>',
+            color: '#6b95bf'
+         });
+      <% }) %>
 
          calendar.render();
          });
@@ -83,9 +83,7 @@
          
          // Set their ids dynamically.
          itinerary.id = "itinerary-" + i;
-         console.log(itinerary.id.match(/\d+$/)[0]);
          button.id = "toggle-" + i;
-         console.log(button.id.match(/\d+$/)[0]);
       }
 
       function toggleVisibility(clicked){
@@ -99,8 +97,5 @@
             }
          }
       }
-
-      console.log(itineraries);
-      console.log(buttons);
   </script>
 </body>
