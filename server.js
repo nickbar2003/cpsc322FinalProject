@@ -64,6 +64,8 @@ app.post('/deletePlan', (req, res) => {
     });
 });
 
+
+
 app.get('/country_comparison', (req, res) => {
     res.render('country_comparison')
 });
@@ -147,6 +149,24 @@ app.post('/populated_comparison', (req, res) => {
     handleQuery(city2, 1);
 });
 
+app.post('/search_city', (req, res) => {
+    const cityName = req.body.cityName;
+    const query = 'SELECT  Food, Landmark, Housing FROM country_comparison WHERE name = ?';
+
+    cn.execute(query, [cityName], function(err, results) {
+        if (err) {
+            console.error('Error: ', err);
+            res.status(500).send('Error fetching data');
+            return;
+        }
+
+        if (results.length > 0) {
+            res.json(results[0]);
+        } else {
+            res.status(404).send('City not found');
+        }
+    });
+});
 
 app.post('/savePlan', (req, res) => {
     const q = 'UPDATE plan SET destination = ?,startDate = ?, endDate = ?, activities = ?, notes = ? WHERE name = ?';
