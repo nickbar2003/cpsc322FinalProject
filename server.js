@@ -74,19 +74,25 @@ app.get('/create-plan', (req, res) => {
     res.render('create-plan')
 });
 
-app.get('/calendar', (req, res) => {
-    const q = 'SELECT * FROM plan ORDER BY name';
-    cn.connect();
-    cn.query(q, function (err, rows, fields) {
+app.get('/city', (req, res) => {
+    const cityName = req.query.name;
+    const query = 'SELECT * FROM city WHERE name = ?';
+
+    cn.query(query, [cityName], (err, results) => {
         if (err) {
-            console.log('Error: ', err);
-            res.status(500).send('Error fetching city data');
+            console.error('Error fetching city data:', err);
+            res.status(500).send('Server error');
             return;
         }
 
-        res.render('calendar', { info: rows });
+        if (results.length > 0) {
+            res.render('cityPage', { info: results });
+        } else {
+            res.status(404).send('City not found');
+        }
     });
 });
+
 
 app.get('/plan-editor', (req, res) => {
     res.render('plan-editor')
@@ -118,6 +124,22 @@ app.post('/city', (req, res) => {
     });
 });
 
+
+app.get('/city', (req, res) => {
+    const q = 'SELECT * FROM city WHERE name = ?';
+    const cityName = req.query.name;
+
+    cn.connect();
+    cn.query(q, [cityName], function (err, rows, fields) {
+        if (err) {
+            console.log('Error: ', err);
+            res.status(500).send('Error fetching city data');
+            return;
+        }
+
+        res.render('cityPage', { info: rows });
+    });
+});
 
 app.post('/populated_comparison', (req, res) => {
     const { city1, city2 } = req.body; // Retrieve player names from the form inputs
@@ -158,6 +180,8 @@ app.post('/populated_comparison', (req, res) => {
     handleQuery(city1, 0);
     handleQuery(city2, 1);
 });
+
+
 
 app.post('/search_city', (req, res) => {
     const cityName = req.body.cityName;
@@ -241,5 +265,7 @@ app.post('/plan-editor', (req, res) => {
 // router.use("/api/songs", require("./api/songs"));
 
 // app.use(router);
+
+
 
 app.listen(3000);
