@@ -4,9 +4,7 @@
 (modified from WPD1 Abstract)
  A travel website that will allow for a user to assemble a custom vacation plan; cities will have their destination details laid out on their own pages. These can be searched for by direct naming(via a seach-bar entry) or attribute filtering(e.g. affordability, current events, landmarks, etc.). Such pages will contain information relating to the following: activities, food, landmarks, and current events. Additionally, a vacation planner will present a calendar and itinerary that can be modified via the addition or subtraction of destinations, which can be compared between each other alongside a series of variables entered by the user.
 
-
 # Table of Contents
-
 
   Installation
   Usage
@@ -16,8 +14,29 @@
   License 
 
 # Installation
-This project requires no installation, one can host it locally with VScode.
+To access the database the user has two options 
 
+1. (prefered) Use gonzagas VPN to access the gonzaga database (requires gonzaga email). 
+  follow the instructions at this link link https://support.gonzaga.edu/TDClient/30/Portal/KB/ArticleDet?ID=42
+
+  add a file named config.json with the following contents
+  {
+    "host": "cps-database.gonzaga.edu",
+    "user": "nbarinaga",
+    "password": "nbarinaga83654573",
+    "database": "Tplan_DB"
+  } 
+
+2. Set up personal mysql database.
+  Once personal database is set up populate the database using project.sql
+
+  add a file named config.json add fill in each section
+  {
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": ""
+}
 
 # Usage:
 The general usage is as thus: The user will open the webiste and see a featured page with a few featured city travel pages. They will see a navigation bar with links to a planner, calender, and comaprision tool. The user can go to a city page either by searching (by name or attibute e.i. Europe) or the user can click on the city pages in the featured section. The Planenr tool allows the user to make new vaction plans. The user can create and delete hypothetical travel plans. The user can also edit plans in which they can set the number of days for the trip and edit itineraries. The user can add these plans to a calender. In the calender tool the user will be able to add plans to a the calender and view them alongside their itineraries. Lastly the comparision tool will allow a user to compare two city travel pages based on an attribute's rating. The resulting attribute with the higher rating will be displayed with a green marker, and the lower attribute will be shown with red marker Ex: ratings for two different landmarks, the 4/5 landmark will be shown in green, and the 3/5 would be shown in red. 
