@@ -118,6 +118,25 @@ app.post('/city', (req, res) => {
     });
 });
 
+app.get('/city', (req, res) => {
+    const cityName = req.query.name;
+    const query = 'SELECT * FROM city WHERE name = ?';
+
+    cn.query(query, [cityName], (err, results) => {
+        if (err) {
+            console.error('Error fetching city data:', err);
+            res.status(500).send('Server error');
+            return;
+        }
+
+        if (results.length > 0) {
+            res.render('cityPage', { info: results });
+        } else {
+            res.status(404).send('City not found');
+        }
+    });
+});
+
 
 app.post('/populated_comparison', (req, res) => {
     const { city1, city2 } = req.body; // Retrieve player names from the form inputs
