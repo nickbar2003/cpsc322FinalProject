@@ -9,6 +9,7 @@ $(document).ready(function() {
         var data = $(this).serialize();
         var infoBoxId = formId === 'search-form-city1' ? '#city1-info' : '#city2-info';
 
+        
         $.ajax({
             type: "POST",
             url: url,
