@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
         res.render('featured', { info: rows, functions: functions })
     });
-    
+
 });
 
 app.get('/plannerOverview', (req, res) => {
@@ -54,7 +54,7 @@ app.post('/deletePlan', (req, res) => {
     const q = 'Delete FROM plan WHERE name = ?';
     const planName = req.body.value;
     cn.connect();
-    cn.query(q,[planName], function (err, rows, fields) {
+    cn.query(q, [planName], function (err, rows, fields) {
         if (err) {
             console.log('Error: ', err);
             res.status(500).send('Error fetching city data');
@@ -98,6 +98,10 @@ app.get('/plan-editor', (req, res) => {
     res.render('plan-editor')
 });
 
+app.get('/cityNotFoundPage', (req, res) => {
+    res.render('cityNotFoundPage')
+});
+
 app.post('/city', (req, res) => {
     const q = 'SELECT * FROM city WHERE name = ?';
     const cityName = req.body.value; // Retrieve the selected value from the form
@@ -109,8 +113,14 @@ app.post('/city', (req, res) => {
             res.status(500).send('Error fetching city data');
             return;
         }
+        if (rows.length === 0) {
+            res.redirect('/cityNotFoundPage');
+        }
 
-        res.render('cityPage', { info: rows });
+        else {
+            res.render('cityPage', { info: rows });
+        }
+
     });
 });
 
@@ -177,7 +187,7 @@ app.post('/search_city', (req, res) => {
     const cityName = req.body.cityName;
     const query = 'SELECT  Food, Landmark, Housing FROM country_comparison WHERE name = ?';
 
-    cn.execute(query, [cityName], function(err, results) {
+    cn.execute(query, [cityName], function (err, results) {
         if (err) {
             console.error('Error: ', err);
             res.status(500).send('Error fetching data');
@@ -222,7 +232,7 @@ app.post('/makePlan', (req, res) => {
     const plan = req.body.planName;
 
     cn.connect();
-    cn.query(q, [ plan, destination, startDate, endDate, activities, notes], function (err, rows, fields) {
+    cn.query(q, [plan, destination, startDate, endDate, activities, notes], function (err, rows, fields) {
         if (err) {
             console.log('Error: ', err);
             res.status(500).send('Error fetching city data');
@@ -241,8 +251,10 @@ app.post('/plan-editor', (req, res) => {
         if (err) {
             console.log('Error: ', err);
             res.status(500).send('Error fetching plan data');
+
             return;
         }
+
 
         res.render('plan-editor', { info: rows });
     });
