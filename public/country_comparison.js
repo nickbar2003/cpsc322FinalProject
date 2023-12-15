@@ -31,31 +31,4 @@ $(document).ready(function() {
 });
 
 
-function getCityName2() {
-    
-    var cityName2 = document.getElementById('search-input2').value.toLowerCase();
 
-    
- 
-
-
-  
-        return 'resources/'+cityName2+'_1.jpg';
-     
-    
-}
-
-function getCityName1() {
- 
-  
-    var cityName1 = document.getElementById('search-input1').value.toLowerCase();
-
-
-        return 'resources/'+cityName1+'_1.jpg';
-     
-    
-}
-
-function openImageNewTab(imagePath) {
-    window.open(imagePath, '_blank');
-}

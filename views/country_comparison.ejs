@@ -24,26 +24,29 @@
                 <input type="text" name="cityName" id="search-input1" class="search-input" placeholder="Enter city name">
                 <button type="submit" class="search-button">Search</button>
             </form>
-            <div class="content-container" id="city1-info">
-            
-            </div>
-            <button type="button" id="learn-more-button2" class="learn-more-button" onclick="openImageNewTab(getCityName1())">Learn More</button>
+            <div class="content-container" id="city1-info"></div>
+            <button type="button" class="learn-more-button" onclick="redirectToCityPage('search-input1')">Learn More</button>
         </div>
         <div class="search-box">
             <form id="search-form-city2" class="search-form" action="/search_city" method="POST">
                 <input type="text" name="cityName" id="search-input2" class="search-input" placeholder="Enter city name">
                 <button type="submit" class="search-button">Search</button>
             </form>
-            <div class="content-container" id="city2-info">
-               
-            </div>
-    
-            <button type="button" id="learn-more-button2" class="learn-more-button" onclick="openImageNewTab(getCityName2())">Learn More</button>
-
+            <div class="content-container" id="city2-info"></div>
+            <button type="button" class="learn-more-button" onclick="redirectToCityPage('search-input2')">Learn More</button>
         </div>
     </div>
-    
-    <script src="country_comparison.js"></script>
 
+    <script>
+        function redirectToCityPage(inputId) {
+            var cityName = document.getElementById(inputId).value;
+            if (cityName) {
+                var url = '/city?name=' + encodeURIComponent(cityName);
+                window.location.href = url;
+            }
+        }
+    </script>
+
+    <script src="country_comparison.js"></script>
 </body>
 </html>

@@ -957,3 +957,15 @@ textarea {
     margin: 10px;
     height: 200px;
 }
+
+.search-box {
+    position: relative;
+    padding-bottom: 30px; 
+}
+
+.learn-more-button {
+    position: absolute;
+    bottom: 20px; 
+    left: 5%;
+    transform: translateX; 
+}
